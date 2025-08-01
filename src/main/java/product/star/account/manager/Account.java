@@ -1,17 +1,31 @@
-package org.example;
+package product.star.account.manager;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+public class Account {
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+    private final long id;
+    private long amount;
+
+    public Account(long id, long amount) {
+        this.id = id;
+        this.amount = amount;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public long getAmount() {
+        return amount;
+    }
+    public void setAmount(long amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", amount=" + amount +
+                '}';
     }
 }
